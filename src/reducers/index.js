@@ -4,10 +4,12 @@ import {
   FETCH_NUMBER_FAIL,
   SET_FORM_INPUT,
   SET_TRIVIA,
+  SETUP,
 } from '../actions';
 
 const initialState = {
-  number: 42,
+  isSetUp: false,
+  number: 0,
   trivia: null,
   error: null,
   isFetching: false,
@@ -16,6 +18,12 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case SETUP: {
+      return {
+        ...state,
+        isSetUp: true,
+      }
+    }
     case FETCH_NUMBER_START: return {
       ...state,
       number: action.payload,

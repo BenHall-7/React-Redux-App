@@ -2,6 +2,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 const Trivia = (props) => {
+  if (!props.isSetUp) {
+    return <p>Loading...</p>
+  }
+
   let text = null;
   if (props.isFetching) {
     text = "fetching..."
@@ -21,6 +25,7 @@ const Trivia = (props) => {
 
 export default connect(
   state => ({
+    isSetUp: state.isSetUp,
     number: state.number,
     trivia: state.trivia,
     error: state.error,

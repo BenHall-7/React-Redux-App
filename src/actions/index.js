@@ -1,5 +1,6 @@
 import axios from "axios";
 
+export const SETUP = 'SETUP';
 export const FETCH_NUMBER_START = 'FETCH_NUMBER_START';
 export const FETCH_NUMBER_SUCCESS = 'FETCH_NUMBER_SUCCESS';
 export const FETCH_NUMBER_FAIL = 'FETCH_NUMBER_FAIL';
@@ -27,4 +28,8 @@ export const fetchNumber = (number, type) => dispatch => {
 export const setFormInput = input => ({
   type: SET_FORM_INPUT,
   payload: input,
+})
+
+export const setup = input => ({
+  type: SETUP,
 })
