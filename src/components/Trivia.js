@@ -12,7 +12,7 @@ const Trivia = (props) => {
   }
 
   return (
-    <div>
+    <div id="trivia">
       <p>Your number: {props.number}</p>
       <p>{text}</p>
     </div>

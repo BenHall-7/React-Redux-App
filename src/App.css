@@ -1,3 +1,25 @@
 .App {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  margin: auto;
+  background: orange;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#number-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 20px 20px 20px 10px;
+}
+
+#number-form input {
   text-align: center;
+}
+
+#number-form button {
+  background: burlywood;
+  padding: 5px 0;
+  border: none;
 }
